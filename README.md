@@ -1,4 +1,4 @@
-# TZXDuino-Pico REVISION 1.2 CASSETTE RECORDER EMULATOR IN MINIATURE FORMAT
+# TZXDuino-Pico REVISION 1.3 CASSETTE RECORDER EMULATOR IN MINIATURE FORMAT
 
 A small board that can be built into a home computer, that can send .TZX cassette data read from an SD-Card to its cassette input
 With one button you can page through the available files (games) and by pressing another button start playback, after first entering CLOAD "" on the Spectrum (or the ZX-81 if you use ZX-81 .TZX Files)
@@ -30,7 +30,8 @@ Start soldering with the SD-Card holder, solder the six (of the eight available)
 
 The Arduino-nano does not have to be socketed if you need to have as low a profile as possible, but not having a socket makes removing the Arduino nearly impossible, so if a low profile is not needed use a socket (By socket I mean two cut to lenght female pinheader strips). in this version I indicated that the Arduino's USB connector is oriented on top. Pin 1 of the Arduino is on the bottom right.
 
-
+I noticed that I made a mistake with the 5V to 3V3 level converters in revision 1.2, so I corrected that in revision 1.3.
+The fact is that revision 1.2 has worked for many months without a problem, and I have seen schematic that simply left the voltage conversion out. So I must concluede that most (if not all) SD-Cards are not 5V intolerant!
 
 # How to use the TZXDuino-pico
 Place one or more .TZX files for the computer you use in the root of the sd-card. With the card inserted in the TZXDuino-pico power up the spectrum, and start a cassette load (Press LOAD and two quotes "") and press enter. the screen will blank. now choose the game you want to load using the "next" button (or don't press the button at all if you just want the default (first) game in the list), in the order you put files on the card. Then press the "play" button, and if all is well (No wiring errors, and the Arduino loaded with the default TZXDuino software) the TZXDuino-pico will start sending the cassette audio, and the screen will respond by showing the loading pattern (horizontal stripes) indicating loading has started, after a few seconds the Spectrum will show the name of the file you are loading, then resume the load. Depending of the game sometimes a loading screen will appear on the screen before the actual game is loaded. During the load you will hear the cassette audio from the Spectrum's speaker.
